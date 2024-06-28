@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<body>
+
+    <h1>Learning positioning</h1>
+    <style>
+        div{
+            height: 70px;
+            margin-bottom: 10px;
+            background-color: red;
+            height: 700px;
+        }
+        .div-1{
+            position: relative;
+            /* top: 50px; */
+            /* left: 70px; */
+            right: 100px;
+            bottom: 100px;
+        }
+        .div-5{
+           
+            position: relative;
+           
+        }
+
+        .absolute-div{
+            position: absolute;
+            background-color: green;
+            top: 0;
+            right: 20px;
+        }
+        .div-6{
+            background-color: blue;
+            height: 70px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+        .absolute-container{
+            background-color: black;
+            position: relative;
+        }
+        .section-box{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            position: absolute;
+        }
+        .section-box-2{
+            left: 30px;
+            background-color: purple;
+            top: 20px;
+        }
+        .section-box-1{
+            z-index: 9999;
+        }
+    </style>
+
+    <div class="div-1">1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div class="div-5">
+        <div class="absolute-div">am position absolute</div>
+    </div>
+    <div class="div-6">
+        6
+    </div>
+
+   <div class="absolute-container">
+    <section class="section-box section-box-1">section 1</section>
+    <section class="section-box section-box-2">section 2</section>
+
+   </div>
+    
+</body>
+</html>
