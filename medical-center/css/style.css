@@ -379,8 +379,7 @@ html{
     display: table;
 }
 
-.testifier-figure{
-   
+.testifier-figure{ 
     float: left;
 }
 
@@ -408,4 +407,91 @@ html{
 .testifier-star-rating{
     margin-bottom: 20px;
     color: var(--color-orange);
+}
+
+/****************************************** Section CTA *******************/
+.section-cta{
+    padding: 100px 0;
+}
+
+.cta-container{
+    max-width: 1140px;
+    height: 450px;
+    padding: 200px 100px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/doctors-6.jpg');
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+.cta-container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cta-content-left{
+    float: left;
+}
+
+.cta-para{
+    color: var(--color-primary);
+}
+
+.cta-content-left h4{
+    color: #fff;
+    margin: 12px 0;
+}
+
+.cta-content-left span{
+    color:#fff;
+}
+
+.cta-content-right{
+    background-color: blue;
+    float: right;
+}
+
+/****************************************** Section Blog *******************/
+.section-blog{
+    padding: 100px 0;
+}
+
+.blog-card{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blog-media{
+
+}
+
+.blog-image{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-text{
+    padding: 30px;
+}
+
+.blog-date{
+    color: #ccc;
+}
+
+.blog-title{
+    margin: 10px 0;
+}
+
+.blog-main-text{
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.blog-btn{
+    color: var(--color-orange);
+    text-decoration: none;
 }
