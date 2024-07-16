@@ -1,0 +1,128 @@
+/*Global Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Lato, sans-serif;
+}
+
+/*
+    DAY-TO-DAY SUMMARY OF PROJECT
+        DAY 1:
+            We learnt the following;
+            1. List-style property
+            2. Targetting element(s) by descendant selector
+            3. Targetting element(s) by compound selector
+       
+*/
+/***************************** Navigation ***************/
+.nav{
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-content-container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.nav-content-container::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-contents{
+    margin-right: 10px;
+    float: left;
+}
+
+.nav-menu{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.nav-content-right{
+    margin-top: 20px;
+}
+
+.nav-list{
+    width: 40%;
+    margin:  0 auto;
+}
+
+.nav-list::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-logo{
+    height: 50px;
+}
+
+.nav-list .nav-item{
+    float: left;
+    list-style: none;
+    margin-left: 25px;
+  
+}
+/*Using descedant selector */
+.nav-list .nav-item .nav-link{
+    color:#000;
+    text-decoration: none;
+}
+
+.nav-list .nav-item .active-nav-link{
+    color: #25ced1;
+}
+
+/***************************** Reusable Components ***************/
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: green;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row [class^="col-"]{
+    background-color: red;
+    float: left;
+}
+
+
+.row [class^="col-"]:not(:last-child){
+    margin-right: 20px;
+}
+
+
+.row .col-1-of-2{
+    width: calc((100% -  20px) / 2);
+}
+
+/***************************** Buttons ***************/
+.btn{
+    border: none;
+    padding: 10px 12px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+/*Using Compound selector */
+.btn.btn-half{
+    color: #ff8a5b;
+    border: 2px solid #ff8a5b;
+}
+
+/***************************** Hero Section ***************/
+.hero{
+    height: 90vh;
+    padding-top: 60px;
+    background-color: #f4f4f4;
+}
