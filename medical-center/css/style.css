@@ -210,6 +210,7 @@ html{
 }
 .hero-para{
     margin-bottom: 30px;
+    color: blue;
 }
 
 .hero-image-container{
@@ -578,4 +579,77 @@ html{
     margin-top: 30px;
     text-align: center;
     color: var(--color-primary);
+    background-color: red;
+    background-color: blue;
+
+}
+
+
+
+/*Media query for device width less or equal to 7680px (Tablet, ipad) */
+@media screen and (max-width: 768px){
+    section{
+        padding: 50px 0;
+    }
+    .nav-contents-group{
+        background-color: blue;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .nav-contents {
+        margin-right: 0px;
+        float: none;
+        margin-top: 10px;
+        background-color: red;
+
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-list {
+        /* background-color: blueviolet; */
+        width: 100%;
+        margin: 0 ;
+    }
+
+    .nav-contents .nav-list .nav-item {
+        float: none;
+        margin-bottom: 10px;
+    }
+    .row{
+        padding: 0 10%;
+    }
+    .row [class^="col-"]{
+        float: none;
+       width: 100%;
+    }
+
+    .row [class^="col-"]:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+/*Media query for device width less or equal to 480px (Mobile phone) */
+@media screen and (max-width: 480px){
+    .row{
+        padding: 0 5%;
+    }
+
+    .hero-image-container {
+        height: 300px;
+        width: 300px;
+        padding-top: 30px;
+    }
+
+    .composition--1 {
+        width: 300px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 20px;
+        background-image: linear-gradient(to right, var(--primary-color-dark), var(--color-primary));
+    }
 }

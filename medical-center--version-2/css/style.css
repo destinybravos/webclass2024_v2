@@ -8,6 +8,12 @@
 html{
     font-family: Lato, sans-serif;
 }
+/*Declaring a variable in css */
+:root{
+    --primary-color:#25ced1;
+    --primary-color-dark:#204c4d;
+    --secondary-color:#ff8a5b;
+}
 
 /*
     DAY-TO-DAY SUMMARY OF PROJECT
@@ -16,12 +22,20 @@ html{
             1. List-style property
             2. Targetting element(s) by descendant selector
             3. Targetting element(s) by compound selector
+        DAY 2:
+            We learnt the following;
+            1. How to use letter-spacing property
+            2. How to give an element two or more background colors using background-image:linear-gradient()
+            3. How to use background-clip property and set it to text
+            4. How to draw a circle using the concept of same height and width and border-radius
+            5. How to use the overflow property
        
 */
 /***************************** Navigation ***************/
 .nav{
     padding: 15px 0;
-    border-bottom: 1px solid #ccc;
+   margin-bottom: 7px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
 }
 
 .nav-content-container{
@@ -77,14 +91,13 @@ html{
 }
 
 .nav-list .nav-item .active-nav-link{
-    color: #25ced1;
+    color: var(--primary-color);
 }
 
 /***************************** Reusable Components ***************/
 .row{
     max-width: 1140px;
     margin: 0 auto;
-    background-color: green;
 }
 .row::after{
     content: "";
@@ -93,7 +106,6 @@ html{
 }
 
 .row [class^="col-"]{
-    background-color: red;
     float: left;
 }
 
@@ -116,8 +128,12 @@ html{
 }
 /*Using Compound selector */
 .btn.btn-half{
-    color: #ff8a5b;
-    border: 2px solid #ff8a5b;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+.btn.btn-full{
+    background-color:var(--secondary-color) ;
+    color: #fff;
 }
 
 /***************************** Hero Section ***************/
@@ -125,4 +141,38 @@ html{
     height: 90vh;
     padding-top: 60px;
     background-color: #f4f4f4;
+}
+.hero-text-box{
+
+}
+
+.hero-sub-heading{
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+
+.hero-main-heading{
+    font-size: 45px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, var(--primary-color-dark), var(--primary-color));
+    background-clip: text;
+    color: transparent;
+    margin: 10px 0;
+}
+.hero-para{
+    margin-bottom: 30px;
+}
+
+.hero-image-circle{
+    height: 450px;
+    width: 450px;
+    background-image: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
+    border-radius: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.hero-image-circle img{
+    height: 400px;
 }
