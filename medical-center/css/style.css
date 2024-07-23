@@ -64,7 +64,7 @@ html{
 
 .row [class^="col-"]{
     float: left;
-    /* background-color: orangered; */
+
  }
 
  .row .col-1-of-2{
@@ -104,8 +104,6 @@ html{
 
 /******************************************Navigation Section *******************/
 .nav{
-    /* height: 70px;
-    border-bottom: 2px solid #ccc; */
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 4px;
@@ -122,7 +120,6 @@ html{
 }
 
 .nav-contents{
-    /* background-color: green; */
     margin-right: 10px;
     float: left;
     margin-top: 10px;
@@ -137,7 +134,6 @@ html{
     vertical-align: top;
 }
 .nav-list{
-    /* background-color: blueviolet; */
     width: 40%;
     margin: 0 auto;
 }
@@ -157,6 +153,15 @@ html{
 }
 .nav-list .nav-item .active-link{
     color: var(--color-primary);
+}
+
+/*Mobile Nav Icon */
+.mobile-nav-icon{
+    position: absolute;
+    right: 40px;
+    top: 22px;
+    font-size: 24px;
+    display: none;
 }
 
 
@@ -185,7 +190,7 @@ html{
 
 /****************************************** Hero Section *******************/
 .hero{
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-grey);
     padding: 60px 0;
 }
@@ -210,7 +215,6 @@ html{
 }
 .hero-para{
     margin-bottom: 30px;
-    color: blue;
 }
 
 .hero-image-container{
@@ -450,7 +454,6 @@ html{
 }
 
 .cta-content-right{
-    background-color: blue;
     float: right;
 }
 
@@ -579,77 +582,129 @@ html{
     margin-top: 30px;
     text-align: center;
     color: var(--color-primary);
-    background-color: red;
-    background-color: blue;
-
 }
 
 
 
-/*Media query for device width less or equal to 7680px (Tablet, ipad) */
-@media screen and (max-width: 768px){
-    section{
-        padding: 50px 0;
-    }
-    .nav-contents-group{
-        background-color: blue;
-    }
-    .mobile-menu{
-        display: none;
-    }
-    .nav-contents {
-        margin-right: 0px;
-        float: none;
-        margin-top: 10px;
-        background-color: red;
+/**********************MEDIA QUERY MANAGER ******************
+/*
+    0 - 480px:      Phone
+    481 - 900px:    Tablet portrait
+    901 - 1200px:   Tablet landscape
+    [1200 - 1800] is where our normal styles apply
+    1800px + :      Big desktop
+*/
 
-    }
+/*Media query for devices with width less or equal to 900px (Tablet, ipad) */
+@media screen and (max-width: 900px){
+    .nav {padding: 15px 27px;}
+   .row{max-width: 450px;}
 
-    .nav-menu {
-        width: 100%;
-    }
-
-    .nav-list {
-        /* background-color: blueviolet; */
-        width: 100%;
-        margin: 0 ;
-    }
-
-    .nav-contents .nav-list .nav-item {
-        float: none;
-        margin-bottom: 10px;
-    }
-    .row{
-        padding: 0 10%;
-    }
-    .row [class^="col-"]{
-        float: none;
-       width: 100%;
-    }
-
-    .row [class^="col-"]:not(:last-child) {
+   .row [class^="col-"]:not(:last-child){
         margin-right: 0;
-        margin-bottom: 40px;
-    }
-}
-
-/*Media query for device width less or equal to 480px (Mobile phone) */
-@media screen and (max-width: 480px){
-    .row{
-        padding: 0 5%;
+        margin-bottom: 54px;
     }
 
-    .hero-image-container {
+    .row [class^="col-"]{width: 100%;}
+
+    section{padding: 50px 0 !important;}
+
+    .about-composition{
+        position: relative;
+        height: 300px;
+    }
+    
+    .composition{width: 300px;}
+    .composition--1{height: 300px;}
+    .composition--2{
+        height: auto;
+        left: 50px;
+    }
+
+    .testifier-figure{ 
+        float: none;
+    }
+    
+    .testifier-details{
+        float: none;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .footer-social-list{width: 20%;}
+
+    .footer-nav-brand{
+        float: none;
+    }
+   
+    
+    .footer-menu{
+        float: none;
+    }
+
+    .nav-menu{
+        width: 250px;
+        position: absolute;
+        left: -320px;
+        top: 85px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px #ccc;
+        border-radius: 8px;
+        padding: 20px 40px;
+        transition: all 300ms;
+    }
+
+    .nav-list{ width: 100%;}
+
+    /*Mobile Nav Icon */
+    .mobile-nav-icon{display: block;}
+
+    .nav-contents .nav-list .nav-item{
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .nav-content-middle{
+        float: right;
+        padding-right: 80px;
+    }
+
+    .hero-image-container{
         height: 300px;
         width: 300px;
-        padding-top: 30px;
     }
 
-    .composition--1 {
-        width: 300px;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 60px;
-        border-bottom-right-radius: 20px;
-        background-image: linear-gradient(to right, var(--primary-color-dark), var(--color-primary));
+    .hero-image-container img{height: 100%;}
+    .composition--2 {left: 20px; }
+}
+
+/*Media query for devices with width less or equal to 480px (Mobile phone) */
+@media screen and (max-width: 480px){
+    .row {padding: 0 27px;}
+
+    .stats{ 
+        margin-right: 21px;
+        margin-bottom: 20px;
     }
+
+    .footer-social-list{
+        width: 80%;
+    }
+
+    .nav-content-middle {
+        float: right;
+        display: none;
+        padding-right: 30px;
+    }
+
+    .cta-container {padding: 100px 27px;}
+    .cta-content-left,
+    .cta-content-right  {float: none;}
+
+    .cta-content-right{margin-top: 30px;}
+}
+
+/*Media query for devices with width less or equal to 320px (small phone) */
+@media screen and (max-width: 320px) {
+    
 }
