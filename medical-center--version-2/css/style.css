@@ -13,6 +13,9 @@ html{
     --primary-color:#25ced1;
     --primary-color-dark:#204c4d;
     --secondary-color:#ff8a5b;
+    --color-grey:#f4f4f4;
+    --darker-grey:#f4f4f4;
+    --column-gutter: 20px;
 }
 
 /*
@@ -31,6 +34,15 @@ html{
             5. How to use the overflow property
        
 */
+
+/***************************** Headings ***************/
+.heading-secondary{
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.heading-primary{
+
+}
 /***************************** Navigation ***************/
 .nav{
     padding: 15px 0;
@@ -111,12 +123,23 @@ html{
 
 
 .row [class^="col-"]:not(:last-child){
-    margin-right: 20px;
+    margin-right: var(--column-gutter);
 }
 
 
 .row .col-1-of-2{
-    width: calc((100% -  20px) / 2);
+    width: calc((100% -  var(--column-gutter)) / 2);
+}
+.row .col-1-of-3{
+    width: calc((100% -  (2 * var(--column-gutter))) / 3);
+}
+
+/***************************** Utilities ***************/
+.text-center{
+    text-align: center;
+}
+.u-margin-bottom-big{
+    margin-bottom: 50px;
 }
 
 /***************************** Buttons ***************/
@@ -140,7 +163,7 @@ html{
 .hero{
     height: 90vh;
     padding-top: 60px;
-    background-color: #f4f4f4;
+    background-color: var(--darker-grey);
 }
 .hero-text-box{
 
@@ -175,4 +198,45 @@ html{
 
 .hero-image-circle img{
     height: 400px;
+}
+
+/***************************** Section Steps ***************/
+.section-steps{
+    padding: 100px 0;
+}
+.steps-container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+}
+.step{
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+    border-radius: 7px;
+    padding-bottom: 15px;
+}
+
+.step-icon-circle{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color:var(--color-grey) ;
+}
+
+.step-icon{
+    color:var(--primary-color);
+    font-size: 25px;
+}
+
+.step-heading{
+    margin-bottom: 20px;
+}
+
+.step-para{
+
 }
