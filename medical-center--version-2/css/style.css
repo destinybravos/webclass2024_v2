@@ -43,12 +43,16 @@ html{
 .heading-primary{
 
 }
+
 /***************************** Navigation ***************/
 .nav{
     padding: 15px 0;
    margin-bottom: 7px;
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+   
 }
+
+
 
 .nav-content-container{
     max-width: 1140px;
@@ -104,6 +108,15 @@ html{
 
 .nav-list .nav-item .active-nav-link{
     color: var(--primary-color);
+}
+
+/*Mobile Nav Icon */
+.mobile-nav-icon{
+    position: absolute;
+    right: 40px;
+    top: 22px;
+    font-size: 24px;
+   display: none;
 }
 
 /***************************** Reusable Components ***************/
@@ -175,7 +188,7 @@ html{
 
 /***************************** Hero Section ***************/
 .hero{
-    height: 90vh;
+    min-height: 90vh;
     padding-top: 60px;
     background-color: var(--darker-grey);
 }
@@ -595,4 +608,126 @@ padding: 100px 0;
     text-align: center;
     color: var(--primary-color);
 }
+
+
+
+
+/**********************MEDIA QUERY MANAGER ******************
+/*
+    0 - 480px:      Phone
+    481 - 900px:    Tablet portrait
+    901 - 1200px:   Tablet landscape
+    [1200 - 1800] is where our normal styles apply
+    1800px + :      Big desktop
+*/
+
+/*Media query for devices with width less or equal to 900px (Tablet, ipad) */
+@media  screen and  (max-width: 900px){
+
+    .row [class^="col-"]{
+        float: none;
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 30px;
+    }
+    
+    .row {
+        max-width: 450px;
+    }
+
+    .about-statistic {
+        margin-bottom: 20px;
+    }
+
+    section{
+        padding: 50px 0 !important;
+    }
+
+    .nav-menu {
+        width: 300px;
+        margin-top: 20px;
+        position: absolute;
+        top: 70px;
+        left: -307px;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 50px;
+        box-shadow: 0 5px 8px #ccc;
+        transition: all .3s;
+
+    }
+
+    .nav-list {
+        width: 100%;
+    }
+    .nav-list .nav-item {
+        float: none;
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: 10px;
+      
+    }
+
+    /*Mobile Nav Icon */
+    .mobile-nav-icon{
+        display: block;
+    }
+
+    .footer-nav-brand {
+        float: none;
+    }
+
+    .footer-menu {
+        float: none;
+        margin-top: 25px;
+    }
+
+    .footer-social-icons {
+        width: 24%;
+    }
+
+    
+    .hero-image-circle{
+        height: 300px;
+        width: 300px;
+    }
+
+    .about-image-box{width: 300px; height: 300px;}
+    .composition--1{height: 300px;}
+
+    .about-image {
+        width: 80%;
+        height: auto;
+        left: 50px;
+       
+    }
+    .composition--2{
+        height: auto;
+        
+    }
+
+
+    .hero-image-circle img{height: 100%;}
+}
+
+/* Media  query for devices with width less or equal to 480px (mobiles)*/
+@media  screen and  (max-width: 480px){
+    .row{
+        padding: 0 27px;
+    }
+
+    .testify-figure {
+        float: none;
+    }
+
+    .testify-text {
+        float: none;
+        width: 100%;
+        padding-left: 0px;
+    }
+}
+
+
+
+
 
