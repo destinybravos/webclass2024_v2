@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+</head>
+<body>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+        }
+        .nav-contents-group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-contents{
+          
+            margin-right: 20px;
+           
+        }
+
+        .nav-brand{
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-contents .nav-logo{
+            height: 50px;
+        }
+
+        .nav-list{
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-contents .nav-list .nav-item{
+           
+            margin-right: 20px;
+        }
+
+        .nav-list .nav-item .nav-link{
+            color: #000;
+            text-decoration: none;
+        }
+        .nav-list .nav-item .active-link{
+           color: blue;
+        }
+
+        .btn{
+            text-decoration: none;
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 7px;
+        }
+        /*Targetting using compound selector (an element that have a class name "btn-half" with another class named "btn") */
+        .btn.btn-half{
+            border: 2px solid orange;
+            color: orange;
+        }
+        .btn.btn-orange{
+            background-color: orange;
+            color:#fff;
+        }
+
+        .btn.btn-blue{
+            background-color: orange;
+            color: #fff;
+        }
+    </style>
+     <!--Navigation Start-->
+   <nav class="nav">
+    <div class="nav-contents-group">
+
+        <!-- Left Nav Contents -->
+        <div class="nav-contents nav-brand">
+           
+            <img src="logo.png" class="nav-logo" alt="">
+            <span class="nav-brand">Medical  Center</span>
+        </div>
+
+        
+        <!-- Middle Nav Contents -->
+        <div class="nav-contents nav-menu" id="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#"  class="nav-link active-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"  class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"  class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+
+          
+        </div>
+
+        <!-- Right Nav Contents -->
+        <div class="nav-contents nav-content-middle">
+           
+            <a href="#" class="btn btn-half">Get In Touch</a>
+        </div>
+
+    
+
+    </div>
+    
+   </nav>
+   <!--Navigation End-->
+    
+</body>
+</html>
