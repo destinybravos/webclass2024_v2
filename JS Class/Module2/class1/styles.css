@@ -1,0 +1,13 @@
+#appContainer{
+    width: 480px;
+    padding: 10px 16px;
+    background-color: rgb(76, 235, 235);
+    margin: 20px auto;
+}
+#appContainer div{
+    margin-bottom: 10px;
+}
+
+#appContainer label{
+    display: block;
+}
