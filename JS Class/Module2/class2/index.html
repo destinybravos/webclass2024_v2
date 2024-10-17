@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <form style="display: flex; flex-direction: column; gap: 10px;">
+            <div>
+                <input type="number" id="nairaInput" placeholder="Naira">
+            </div>
+            <div>
+                <input type="number" id="dollarInput" placeholder="Dollar">
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        const d2n = 1600;
+        const n2d = (1/1600);
+
+        // Listening to the keyup event of the naira input
+        document.getElementById('nairaInput').addEventListener('keyup', (event) => {
+            // Converting to dollar
+            let nairaValue = parseInt(event.target.value);
+            let converted =nairaValue * n2d;
+
+            document.getElementById('dollarInput').value = converted;
+        })
+
+        // Listening to the keyup event of the dollar input
+        document.getElementById('dollarInput').addEventListener('keyup', (ev) => {
+            // Converting to Naira
+            let dollarValue = parseInt(ev.target.value);
+            let converted =dollarValue * d2n;
+
+            document.getElementById('nairaInput').value = converted;
+        })
+    </script>
+</body>
+</html>
