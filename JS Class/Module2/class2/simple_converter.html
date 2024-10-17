@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <form>
+            <div>
+                <input type="number" id="nairaInput" placeholder="Naira">
+            </div>
+            <div>
+                <input type="number" id="dollarInput" placeholder="Dollar">
+            </div>
+            <div>
+                <button type="button" id="btnConvert2D">
+                    To Dollar
+                </button>
+                <button type="button" id="btnConvert2N">
+                    To Naira
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        const d2n = 1600;
+        const n2d = (1/1600);
+
+        document.getElementById('btnConvert2D').addEventListener('click', () => {
+            let nairaValue = parseInt(document.getElementById('nairaInput').value);
+            let converted =nairaValue * n2d;
+
+            document.getElementById('dollarInput').value = converted;
+        })
+
+
+        document.getElementById('btnConvert2N').addEventListener('click', () => {
+            let dollarValue = parseInt(document.getElementById('dollarInput').value);
+            let converted =dollarValue * d2n;
+
+            document.getElementById('nairaInput').value = converted;
+        })
+
+    </script>
+</body>
+</html>
