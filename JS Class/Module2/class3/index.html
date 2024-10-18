@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using HTML Classes</title>
+    <style>
+        .flex-center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 540px;
+            margin: 20px auto;
+            background-color: rgb(213, 235, 235);
+            padding: 20px;
+        }
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: lightgray;
+            margin-bottom: 30px;
+        }
+        .flex{
+            display: flex;
+        }
+        .justified{
+            align-items: center;
+            gap: 10px;
+        }
+        .btnColor{
+            padding: 5px 10px;
+        }
+        p{
+
+        }
+    </style>
+</head>
+<body>
+
+    <section class="flex-center">
+        <div id="box">
+
+        </div>
+
+        <aside class="flex justified">
+            <button class="btnColor">RED</button>
+            <button class="btnColor">BLUE</button>
+            <button class="btnColor">GREEN</button>
+            <button class="btnColor">TOMATO</button>
+        </aside>
+
+        <div style="margin-top: 20px;">
+            <input type="text" id="testInput">
+        </div>
+    </section>
+
+    <script>
+        let buttons = document.getElementsByClassName('btnColor');
+        let box = document.getElementById('box');
+
+        for(let i=0; i < buttons.length; i++){
+            buttons[i].addEventListener('click', (ev) => {
+                box.style.backgroundColor = ev.target.innerText
+            })
+        }
+        
+
+        /**
+         * Testing Input with Events
+        */
+        document.getElementById('testInput').addEventListener('keyup', (event) => {
+            box.style.backgroundColor = event.target.value   
+        })
+        // document.getElementById('testInput').addEventListener('blur', () => {
+        //     console.log('You current left the input field');
+        // })
+
+        // document.getElementById('testInput').addEventListener('mousemove', () => {
+        //     console.log('Your mouse is over here');
+        // })
+
+    </script>
+</body>
+</html>
